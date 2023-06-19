@@ -29,20 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Nameofgame = new System.Windows.Forms.Label();
             this.EXIT = new System.Windows.Forms.Label();
             this.DOnt = new System.Windows.Forms.Button();
             this.Do = new System.Windows.Forms.Button();
             this.Gaming = new System.Windows.Forms.Timer(this.components);
+            this.ah = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(0, 20);
-            this.textBox1.TabIndex = 0;
             // 
             // Nameofgame
             // 
@@ -68,7 +61,6 @@
             // DOnt
             // 
             this.DOnt.BackColor = System.Drawing.Color.Black;
-            this.DOnt.Enabled = false;
             this.DOnt.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.DOnt.FlatAppearance.BorderSize = 0;
             this.DOnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -85,7 +77,6 @@
             // Do
             // 
             this.Do.BackColor = System.Drawing.Color.Black;
-            this.Do.Enabled = false;
             this.Do.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Do.FlatAppearance.BorderSize = 0;
             this.Do.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -101,9 +92,18 @@
             // 
             // Gaming
             // 
-            this.Gaming.Enabled = true;
             this.Gaming.Interval = 20;
             this.Gaming.Tick += new System.EventHandler(this.Gaming_Tick);
+            // 
+            // ah
+            // 
+            this.ah.AutoSize = true;
+            this.ah.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ah.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ah.Location = new System.Drawing.Point(281, 156);
+            this.ah.Name = "ah";
+            this.ah.Size = new System.Drawing.Size(0, 18);
+            this.ah.TabIndex = 5;
             // 
             // Form1
             // 
@@ -111,11 +111,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(673, 365);
+            this.Controls.Add(this.ah);
             this.Controls.Add(this.Do);
             this.Controls.Add(this.DOnt);
             this.Controls.Add(this.EXIT);
             this.Controls.Add(this.Nameofgame);
-            this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -130,13 +130,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Nameofgame;
         private System.Windows.Forms.Label EXIT;
         private System.Windows.Forms.Button DOnt;
         private System.Windows.Forms.Button Do;
         private System.Windows.Forms.Timer Gaming;
+        private System.Windows.Forms.Label ah;
     }
 }
 
